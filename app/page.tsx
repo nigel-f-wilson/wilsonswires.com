@@ -1,33 +1,71 @@
-import AcmeLogo from '@/app/ui/acme-logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
-export default function Page() {
+// Demo of using CSS Modules instead of Tailwind.
+// See /app/ui/home.module.css for class definitions.
+// Use this when you need CSS that is not in the Tailwind utility classes.
+import styles from '@/app/ui/home.module.css';
+
+// fonts
+import { inter, lusitana } from '@/app/ui/fonts';
+
+// icons
+import { PhoneIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+
+// images
+import Image from 'next/image';
+
+interface PageProps {
+  // children: React.ReactNode;
+} 
+
+const HomePage: React.FC<PageProps> = ({}) => {
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-        {/* <AcmeLogo /> */}
-      </div>
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
-            </a>
-            , brought to you by Vercel.
-          </p>
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+    <main className="flex min-h-screen flex-col ">
+      
+      <div className="mt-6 flex grow flex-col md:flex-row">
+        <div id="desktop-header-text" className="flex flex-col text-black text-7xl">
+          <span className="text-black pb-4">Electrical Services in</span>
+          <span className="text-black pb-8">Greater New Orleans</span>
+          <Button 
+            label="Call Now"
+            href="tel:504-323-4935"
+            icon={<PhoneIcon/>}
+          />
+          <Button 
+            label="What We Can Do For You"
+            href="tel:504-323-4935"
+            icon={<WrenchScrewdriverIcon/>}
+          />
         </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          {/* Add Hero Images Here */}
+        <div id="desktop-header-image" className="flex text-black border border-red-500">
         </div>
+       
       </div>
     </main>
   );
 }
+
+type LinkType = "anchor" | "next"
+
+interface ButtonProps {
+  linkType: LinkType;
+  label: string;
+  href: string;
+  icon: React.ReactNode;
+} 
+
+const Button: React.FC<ButtonProps> = ({label, href, icon}) => {
+  const iconClasses = "w-5 md:w-8"
+  
+  return (
+    <a
+      href="tel:504-323-4935"
+      className="flex items-center gap-5 self-start rounded-lg bg-blue-main px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-400 md:text-2xl"
+    >
+      <PhoneIcon className={iconClasses} /><span>504-323-4935</span> 
+    </a>
+  );
+}
+
+
+export default HomePage;

@@ -12,10 +12,25 @@ const config: Config = {
         '13': 'repeat(13, minmax(0, 1fr))',
       },
       colors: {
+        gray: {
+          // dark: '#390000',
+          // main: '#9b0000',
+          light: '#d9d9d8',
+        },
+        red: {
+          dark: '#390000',
+          main: '#9b0000',
+          light: '#b60100',
+        },
+        yellow: {
+          dark: '#f29e37',
+          main: '#f2cd3f',
+          // light: '#f2cd3f',
+        },
         blue: {
-          400: '#2589FE',
-          500: '#0070F3',
-          600: '#2F6FEB',
+          dark: '#0d094b',
+          main: '#002abc',
+          light: '#e4e5ef',
         },
       },
     },
