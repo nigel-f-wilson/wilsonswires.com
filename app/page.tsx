@@ -9,10 +9,13 @@ import styles from '@/app/ui/home.module.css';
 import { inter, lusitana } from '@/app/ui/fonts';
 
 // icons
-import { PhoneIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+// import { EnvelopeIcon, PhoneIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
 // images
 import Image from 'next/image';
+
+// components
+import IconButton from "@/app/ui/iconButton"
 
 interface PageProps {
   // children: React.ReactNode;
@@ -26,16 +29,29 @@ const HomePage: React.FC<PageProps> = ({}) => {
         <div id="desktop-header-text" className="flex flex-col text-black text-7xl">
           <span className="text-black pb-4">Electrical Services in</span>
           <span className="text-black pb-8">Greater New Orleans</span>
-          <Button 
+          
+          <IconButton 
+            linkType='next'
+            label="What We Can Do For You"
+            href="/services"
+            icon="tools"
+          />
+          <IconButton 
+            linkType='anchor'
             label="Call Now"
             href="tel:504-323-4935"
-            icon={<PhoneIcon/>}
+            icon="phone"
           />
-          <Button 
-            label="What We Can Do For You"
-            href="tel:504-323-4935"
-            icon={<WrenchScrewdriverIcon/>}
+          <IconButton 
+            linkType='next'
+            label="Email Us"
+            href="/contact"
+            icon="mail"
           />
+          {/* <Button className=''>
+            <PhoneIcon />
+            Test Button
+          </Button> */}
         </div>
         <div id="desktop-header-image" className="flex text-black border border-red-500">
         </div>
@@ -45,27 +61,6 @@ const HomePage: React.FC<PageProps> = ({}) => {
   );
 }
 
-type LinkType = "anchor" | "next"
-
-interface ButtonProps {
-  linkType: LinkType;
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-} 
-
-const Button: React.FC<ButtonProps> = ({label, href, icon}) => {
-  const iconClasses = "w-5 md:w-8"
-  
-  return (
-    <a
-      href="tel:504-323-4935"
-      className="flex items-center gap-5 self-start rounded-lg bg-blue-main px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-400 md:text-2xl"
-    >
-      <PhoneIcon className={iconClasses} /><span>504-323-4935</span> 
-    </a>
-  );
-}
 
 
 export default HomePage;
