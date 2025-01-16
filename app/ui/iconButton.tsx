@@ -9,7 +9,7 @@ import styles from '@/app/ui/home.module.css';
 import { inter, lusitana } from '@/app/ui/fonts';
 
 // icons
-import { EnvelopeIcon, PhoneIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, WrenchScrewdriverIcon, MapIcon } from '@heroicons/react/24/outline';
 
 // images
 import Image from 'next/image';
@@ -17,7 +17,7 @@ import Image from 'next/image';
 
 type LinkType = "anchor" | "next"
 
-type IconType = "tools" | "phone" | "mail"
+type IconType = "tools" | "phone" | "mail" | "map"
 
 
 interface IconButtonProps {
@@ -40,6 +40,9 @@ const IconButton: React.FC<IconButtonProps> = ({linkType, label, href, icon}) =>
       break;
     case 'mail':
       iconWithClasses = <EnvelopeIcon className={iconClasses} />;
+      break;
+    case 'map':
+      iconWithClasses = <MapIcon className={iconClasses} />;
       break;
     default:
       throw new Error("IconButton received invalid icon prop");
