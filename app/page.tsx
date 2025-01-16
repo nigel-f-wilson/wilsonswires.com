@@ -23,20 +23,28 @@ interface PageProps {
 
 const HomePage: React.FC<PageProps> = ({}) => {
   return (
-    <main className="flex min-h-screen flex-col ">
+    <main className="flex flex-row my-6">
       
-      <div id="body-wrapper" className="mt-6 flex grow md:flex-row">
-        <div id="left-side" className="flex flex-col w-3/4 md:w-2/5">
-          <div id="desktop-header-text" className="flex flex-col text-black text-6xl md:text-9xl pr-4">
+
+{/* LEFT SIDE */}
+
+        <div id="left-side" className="flex flex-col pl-3 w-3/5 md:w-3/5 border border-red-600">
+
+          {/* HEADER TEXT */}
+          <div id="desktop-header-text" className="flex flex-col text-black text-5xl md:text-9xl pr-4">
             <span className="pb-4">Electrical</span>
             <span className="pb-6">Services</span>
           </div>
-          <div id="desktop-subheader-text" className="flex flex-col text-black text-3xl pb-4 pr-4 leading-relaxed">
-            <span>Residential and Commercial</span>
-            <span>Serving New Orleans to Baton Rouge</span>
-            <span>Licensed and Insured</span>
+
+          {/* SUBHEADER TEXT */}
+          <div id="desktop-subheader-text" className="flex flex-col text-black text-md pb-4 pr-4 leading-relaxed">
+            <span className='text-nowrap'>Residential and Commercial.</span>
+            <span className='text-nowrap'>Licensed and Insured.</span>
+            <span>Serving New Orleans, Baton Rouge, and in between.</span>
           </div>
-          <div id="button-grid" className="grid grid-cols-2 gap-4 pr-4 py-4">
+
+          {/* BUTTON GRID */}
+          <div id="button-grid" className="grid grid-cols-1 md:grid-cols-2 gap-4 w-100 md:w-3/5 pr-4 py-4">
             <IconButton 
               linkType='next'
               label="What We Do"
@@ -67,8 +75,31 @@ const HomePage: React.FC<PageProps> = ({}) => {
             </Button> */}
           </div>
         </div>
-        <div id="right-side-image" className="flex items-center justify-center  w-1/4 md:w-3/5">
-          {/* Add Hero Images Here */}
+
+{/* RIGHT SIDE */}
+
+        <div id="right-side-image" className=" w-2/5 sm:w-3/8 md:w-2/5 border border-yellow-600">
+          
+          {/* IMAGE ON XS SCREENS */}
+          <Image
+            src="/images/standing_with_tools_cropped_and_cut_vertically.jpeg"
+            
+            width={200}
+            height={350}
+            className="block sm:hidden"
+            alt="Nigel standing with tools and a multimeter"
+          />
+
+          {/* IMAGE ON SM SCREENS */}
+          <Image
+            src="/images/standing_with_tools_cropped.jpeg"
+            width={1000}
+            height={760}
+            className="hidden sm:block md:hidden"
+            alt="Nigel standing with tools and a multimeter"
+          />
+
+          {/* IMAGE ON MD and Up SCREENS */}
           <Image
             src="/images/standing_with_tools_cropped.jpeg"
             width={1000}
@@ -76,30 +107,9 @@ const HomePage: React.FC<PageProps> = ({}) => {
             className="hidden md:block"
             alt="Nigel standing with tools and a multimeter"
           />
-          <Image
-            src="/images/standing_with_tools_cropped.jpeg"
-            width={560}
-            height={620}
-            className="block md:hidden"
-            alt="Nigel standing with tools and a multimeter"
-          />
-          {/* <Image
-            src="/images/standing_with_multimeter_cropped.jpeg"
-            width={1000}
-            height={760}
-            className="hidden md:block"
-            alt="Nigel standing with tools and a multimeter"
-          /> */}
-          {/* <Image
-            src="/standing_with_multimeter_cropped.jpeg"
-            width={560}
-            height={620}
-            className="images/block md:hidden"
-            alt="Nigel standing with tools and a multimeter"
-          /> */}
         </div>
        
-      </div>
+    
     </main>
   );
 }
