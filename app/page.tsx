@@ -23,14 +23,14 @@ interface PageProps {
 
 const HomePage: React.FC<PageProps> = ({}) => {
   return (
-    <main className="grid grid-cols-5 mt-4 w-full min-h-[80vh]">
+    <main className="grid grid-cols-5 grid-rows-[auto min] mt-4 w-full ">
       <div className="col-span-3 h-min" >
         <LeftSideText/>
       </div>
-      <div className="col-span-2 h-min" >
+      <div className="col-span-2 row-span-1 sm:row-span-2 h-min" >
         <RightSideImage/>
       </div>
-      <div className="col-span-full h-min" >
+      <div className="col-span-full sm:col-span-3 h-min" >
         <ButtonGrid/>
       </div>
       

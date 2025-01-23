@@ -5,18 +5,13 @@ import { clsx } from 'clsx';
 import '@/app/ui/global.css';
 import styles from '@/app/ui/home.module.css';
 
-
 // Fonts
-import { inter } from '@/app/ui/fonts';
 
 // Hooks
-import { usePathname } from 'next/navigation'
 
 // Next Components
-import Link from 'next/link';
 
 // My Components
-import Logo from '@/app/ui/logo';
 import Navbar from './ui/navbar';
 import Footer from './ui/footer';
 
@@ -30,12 +25,12 @@ interface LayoutProps {
 const RootLayout: React.FC<LayoutProps> = ({children}) => {
   return (
     <html lang="en">
-      <body className={`flex flex-col items-center bg-blue-light ${styles.body} antialiased`}>
+      <body className={`flex flex-col justify-between bg-blue-light ${styles.body} antialiased min-h-[100vh]`}>
         <Navbar/>
 
         <Body children={children} />
 
-        <Footer />
+        <Footer  />
       </body>
     </html>
   );
