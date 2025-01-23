@@ -5,14 +5,12 @@ import Link from 'next/link';
 // Use this when you need CSS that is not in the Tailwind utility classes.
 import styles from '@/app/ui/home.module.css';
 
-// fonts
+// FONTS
 import { inter, lusitana } from '@/app/ui/fonts';
 
-// icons
+// ICONS
 import { EnvelopeIcon, PhoneIcon, WrenchScrewdriverIcon, MapIcon } from '@heroicons/react/24/outline';
 
-// images
-import Image from 'next/image';
 
 
 type LinkType = "anchor" | "next"
