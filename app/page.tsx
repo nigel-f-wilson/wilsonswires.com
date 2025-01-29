@@ -23,19 +23,35 @@ interface PageProps {
 
 const HomePage: React.FC<PageProps> = ({}) => {
   return (
-    <main className="grid grid-cols-5 grid-rows-[auto min] mt-4 w-full ">
-      <div className="col-span-3 h-min" >
-        <LeftSideText/>
+    <main className="flex flex-col">
+      <div className="grid grid-cols-5 grid-rows-[auto min] mt-4 w-full ">
+        <div className="col-span-3 h-min pl-2" >
+          <LeftSideText/>
+        </div>
+        <div className="col-span-2 row-span-1 sm:row-span-2 h-min" >
+          <RightSideImage/>
+        </div>
+        <div className="col-span-full sm:col-span-3 h-min p-2" >
+          <ButtonGrid/>
+        </div>
       </div>
-      <div className="col-span-2 row-span-1 sm:row-span-2 h-min" >
-        <RightSideImage/>
+      <div id="customer-testimony">
+
       </div>
-      <div className="col-span-full sm:col-span-3 h-min" >
-        <ButtonGrid/>
-      </div>
-      
-      
-      
+      <section id="service-area" className="flex flex-col p-2 text-black leading-none text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[5rem]  w-full aspect-square">
+        {/* SUBHEADER TEXT */}
+        <span className="pb-3">Service Area</span>
+        <a href="https://maps.app.goo.gl/hAhheN86wLPWfpz97" target="_blank" >
+          <Image
+            src="/images/service_area_map.png"
+            width={1560}
+            height={1560}
+            className="rounded-lg"
+            alt="Where we are located in New Orleans"
+          /> 
+        </a>
+        
+      </section>
 
     </main>
   );
@@ -43,16 +59,16 @@ const HomePage: React.FC<PageProps> = ({}) => {
 
 const LeftSideText: React.FC = ({}) => {
   return (
-    <div id="left-side-text" className="flex flex-col pl-3 w-min">
+    <div id="left-side-text" className="flex flex-col w-min">
 
       {/* HEADER TEXT */}
-      <div id="desktop-header-text" className="flex flex-col text-black leading-none text-[3.5rem] xs:text-[5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] xl:pr-4">
+      <div id="desktop-header-text" className="flex flex-col text-black leading-none text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] xl:pr-4">
         <span className="">Electrical</span>
         <span className="pb-3 md:pb-6">Services</span>
       </div>
 
-      {/* SUBHEADER TEXT */}
-      <div id="desktop-subheader-text" className="flex flex-col text-black text-lg md:text-3xl xl:text-3xl pb-4 pr-2 leading-relaxed w-fit">
+      {/* BODY TEXT */}
+      <div id="desktop-body-text" className="flex flex-col text-black text-lg md:text-3xl xl:text-3xl pb-4 pr-2 leading-relaxed w-fit">
         
         <span className="pb-3 md:pb-6" >Serving New Orleans and Baton Rouge, from the North Shore to the West Bank and in between.</span>
         <span className="pb-3 md:pb-6">Residential and Commercial. Troubleshooting, Renovation, New Construction, and more. </span>
@@ -70,8 +86,8 @@ const RightSideImage: React.FC = ({}) => {
       <Image
         // src="/images/standing_with_multimeter_bg_removed.png"
         src="/images/standing_with_tools_bg_removed_for_narrow_screens.png"
-        width={3564}
-        height={1523}
+        width={356}
+        height={152}
         className="block sm:hidden"
         alt="Nigel standing with tools and a multimeter"
       />
@@ -80,8 +96,8 @@ const RightSideImage: React.FC = ({}) => {
       <Image
         // src="/images/standing_with_multimeter_bg_removed.png"
         src="/images/standing_with_tools_bg_removed.png"
-        width={3564}
-        height={1523}
+        width={1188}
+        height={508}
         className="hidden sm:block md:hidden"
         alt="Nigel standing with tools and a multimeter"
       />
@@ -102,7 +118,7 @@ const RightSideImage: React.FC = ({}) => {
 
 const ButtonGrid: React.FC = ({}) => {
   return (
-    <div id="button-grid" className="grid grid-cols-2 gap-2 p-2">
+    <div id="button-grid" className="grid grid-cols-2 gap-2">
       <IconButton 
         linkType='next'
         label="What We Do"
@@ -118,7 +134,7 @@ const ButtonGrid: React.FC = ({}) => {
       <IconButton 
         linkType='next'
         label="Service Area"
-        href="/where-we-work"
+        href="#service-area"
         icon="map"
       />
       <IconButton 
