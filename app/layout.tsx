@@ -24,7 +24,7 @@ interface LayoutProps {
 
 const RootLayout: React.FC<LayoutProps> = ({children}) => {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`flex flex-col justify-between bg-blue-light ${styles.body} antialiased min-h-[100vh]`}>
         <Navbar/>
 
