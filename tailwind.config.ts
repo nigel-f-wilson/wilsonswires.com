@@ -11,6 +11,14 @@ const config: Config = {
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',
       },
+      screens: {
+        'xs': '480px',
+        'sm': '640px',
+        'md': '770px',
+        'lg': '1020px',
+        'xl': '1280px',
+        '2xl': '1540px'
+      },
       colors: {
         gray: {
           // dark: '#390000',
