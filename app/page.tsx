@@ -23,17 +23,18 @@ interface PageProps {
 
 const HomePage: React.FC<PageProps> = ({}) => {
   return (
-    <main className="flex flex-col">
-      <div className="grid grid-cols-5 grid-rows-[auto min] mt-4 w-full ">
+    <main className="flex flex-col stretch ">
+      <div className="grid grid-cols-5 grid-rows-[min auto] mt-4 w-full">
         <div className="col-span-3 h-min pl-2" >
           <LeftSideText/>
         </div>
-        <div className="col-span-2 row-span-1 sm:row-span-2 h-min" >
+        <div className="col-span-2 row-span-1 xs:row-span-3 h-min" >
           <RightSideImage/>
         </div>
-        <div className="col-span-full sm:col-span-3 h-min p-2" >
+        <div className="col-span-full xs:col-span-3 h-min p-2 md:py-4" >
           <ButtonGrid/>
         </div>
+        
       </div>
       <div id="customer-testimony">
 
@@ -68,10 +69,11 @@ const LeftSideText: React.FC = ({}) => {
       </div>
 
       {/* BODY TEXT */}
-      <div id="desktop-body-text" className="flex flex-col text-black text-lg md:text-3xl xl:text-3xl pb-4 pr-2 leading-relaxed w-fit">
+      <div id="desktop-body-text" className="flex flex-col font-medium text-black text-xl md:text-3xl xl:text-3xl pb-4 pr-2 w-fit">
         
-        <span className="pb-3 md:pb-6" >Serving New Orleans and Baton Rouge, from the North Shore to the West Bank and in between.</span>
-        <span className="pb-3 md:pb-6">Residential and Commercial. Troubleshooting, Renovation, New Construction, and more. </span>
+        <span className="pb-3 md:pb-6 " >Serving New Orleans and Baton Rouge. From the North Shore to the West Bank and everywhere between.</span>
+        <span className="pb-3 md:pb-6">Residential and Commercial </span>
+        <span className="pb-3 md:pb-6">New Construction, Renovations, Troubleshooting, and more. </span>
         <span className='text-nowrap'>Licensed and Insured.</span>
       </div>
 
@@ -118,7 +120,7 @@ const RightSideImage: React.FC = ({}) => {
 
 const ButtonGrid: React.FC = ({}) => {
   return (
-    <div id="button-grid" className="grid grid-cols-2 gap-2">
+    <div id="button-grid" className="grid grid-cols-2 gap-2 w-full">
       <IconButton 
         linkType='next'
         label="What We Do"
