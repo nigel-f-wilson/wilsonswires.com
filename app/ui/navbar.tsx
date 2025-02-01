@@ -19,27 +19,31 @@ import Logo from '@/app/ui/logo';
 const Navbar: React.FC = ({}) => {
   const pathname = usePathname() 
   return (
-    <div id="header-bar" className="text-white p-2 flex w-full h-24 md:h-36 object-contain justify-center items-start shrink-0 bg-blue-dark" >
-      <div id="container" className="w-full max-w-6xl h-full flex">
-        <Logo />
-        <div id="growing spacer" className="grow" />
-        <div id="phone and buttons" className="flex flex-col justify-between">
-          <a
-            href="tel:504-323-4935"
-            className="text-3xl md:text-5xl pt-2 font-medium  transition-colors hover:bg-blue-400"
-          >
-            504-323-4935
-          </a>
-          <div className="flex flex-row items-start" >
-            <NavLink text="Home" href="/" currentPathname={pathname} />
-            <NavLink text="Our Services" href="/services" currentPathname={pathname} />
-            <NavLink text="Contact Us" href="/contact" currentPathname={pathname} />
-          </div>
+    <>
+      <div id="header-bar" className="fixed top-0 text-white p-2 flex w-full h-24 md:h-36 object-contain justify-center items-start shrink-0 bg-blue-dark" >
+        <div id="container" className="w-full max-w-6xl h-full flex">
+          <Logo />
+          <div id="growing spacer" className="grow" />
+          <div id="phone and buttons" className="flex flex-col justify-between">
+            <a
+              href="tel:504-323-4935"
+              className="text-3xl md:text-5xl pt-2 font-medium  transition-colors hover:bg-blue-400"
+            >
+              504-323-4935
+            </a>
+            <div className="flex flex-row items-start -ml-3 md:-ml-8" >
+              <NavLink text="Home" href="/" currentPathname={pathname} />
+              <NavLink text="Our Services" href="/services" currentPathname={pathname} />
+              <NavLink text="Contact Us" href="/contact" currentPathname={pathname} />
+            </div>
 
-          {/* <Bars3Icon className="transition-colors hover:bg-blue-400 md:text-2xl w-5 md:w-8" /> */}
+            {/* <Bars3Icon className="transition-colors hover:bg-blue-400 md:text-2xl w-5 md:w-8" /> */}
+          </div>
         </div>
       </div>
-    </div>
+      <div id="sticky-header-bar-spacer" className="relative h-24 md:h-36 shrink-0 bg-blue-dark" />
+    </>
+    
   );
 }
 
@@ -56,7 +60,7 @@ const NavLink: React.FC<NavLinkProps> = ({text, href, currentPathname}) => {
       <Link
         href={href}      
         className="flex items-center self-end rounded-lg bg-blue-dark 
-          pr-4 md:pr-8 pt-2 
+          px-3 md:px-8 pt-2 
           text-lg md:text-3xl 
           font-medium text-white transition-colors hover:bg-blue-main"
       >
