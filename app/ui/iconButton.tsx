@@ -52,7 +52,7 @@ const IconButton: React.FC<IconButtonProps> = ({linkType, label, href, icon}) =>
     return (
       <a
         href={href}
-        className="flex items-center h-full gap-5 self-start rounded-lg bg-blue-main px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-400 md:text-2xl"
+        className="flex items-center h-full gap-5 self-start rounded-lg bg-blue-main px-6 py-3 text-sm sm:text-base md:text-2xl font-medium text-white transition-colors hover:bg-blue-400"
       >
         {iconWithClasses}<span>{label}</span> 
       </a>
@@ -62,7 +62,7 @@ const IconButton: React.FC<IconButtonProps> = ({linkType, label, href, icon}) =>
     return (
       <Link
         href={href}
-        className="flex items-center h-full gap-5 self-start rounded-lg bg-blue-main px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-400 md:text-2xl"
+        className="flex items-center h-full gap-5 self-start rounded-lg bg-blue-main px-6 py-3 text-sm sm:text-base md:text-2xl font-medium text-white transition-colors hover:bg-blue-400"
       >
         {iconWithClasses}<span>{label}</span> 
       </Link>
