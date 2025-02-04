@@ -49,15 +49,15 @@ const ServicesPage: React.FC<PageProps> = ({}) => {
         {/* GENERATORS */}
         <ServiceCard
           title="Generators"
-          bodyText="TODO"
-          bodyTextMobile="TODO"
+          bodyText="In the gulf south, where hurricanes are a common occurrence, generators can save you a lot of money and enable you to stay in your home during prolonged power outages. Generators may seem expensive, but when you consider the value of a refrigerator full of food and the cost of hotel rooms the net savings are clear. Whether you want to install a pad-mounted whole home generator that comes on automatically when it is needed, or simply a receptacle that will allow you to power your home with a portable generator, proper installation is vital for safety. Improperly installed generators can feed power back onto the grid during outages, creating a potentially deadly situation for the crews working to restore downed lines. Call Wilson's Wires today to ensure that you can stay safe and comfortable in your own home next hurricane season!"
+          bodyTextMobile="Generators can save you a lot of money and enable you to stay in your home during prolonged power outages that often happen during hurricane season. Improperly installed generators can feed power back onto the grid during outages, creating a potentially deadly situation for the crews working to restore downed lines. Whether you want a permanent whole home generator or simply a way to connect a portable generator, call Wilson's Wires today to keep the power on no matter what happens!"
           imagePath="/images/stock_portable_generator.jpg"
         />
         {/* NEW CONSTRUCTION */}
         <ServiceCard
-          title="New Construction"
-          bodyText="TODO"
-          bodyTextMobile="TODO"
+          title="New Construction & Temp Poles"
+          bodyText="Did you know the National Electrical Code gets updated every three years? While the basics of how our electrical grid works have not changed much in 100 years, the wires and devices that get installed in homes have changed a lot as safer technologies have been invented. Wiring a new home requires staying on top of the latest changes and additions to the code. If you are a developer looking to build a new home, Wilson's Wires can help you from start to finish. We can pull the permits you will need to get temporary power during construction, coordinate open-wall and final inspections, and get Entergy out for the final hookup. We are highly responsive, making it easy for general contractors to manage the logistics of getting different trades on site in the right order."
+          bodyTextMobile="Wiring a new home requires staying on top of the latest changes to the National Electrical Code. If you are a developer looking to build a new home, Wilson's Wires can help you from start to finish. We handle permitting, temporary power, and inspections. We are highly responsive, making it easy for general contractors to manage the complex logistics of getting different trades on site in the right order."
           imagePath="/images/stock_new_construction.jpg"
         />
         {/* RENOVATIONS */}
