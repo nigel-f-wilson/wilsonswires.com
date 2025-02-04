@@ -39,7 +39,7 @@ const HomePage: React.FC<PageProps> = ({}) => {
       <div id="customer-testimony">
 
       </div>
-      <section id="service-area" className="flex flex-col p-2 text-black leading-none text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[5rem]  w-full aspect-square">
+      <section id="service-area" className="flex flex-col p-2 text-black leading-none text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[5rem]  w-full">
         {/* SUBHEADER TEXT */}
         <span className="pb-3">Service Area</span>
         <a href="https://maps.app.goo.gl/hAhheN86wLPWfpz97" target="_blank" >
@@ -47,8 +47,8 @@ const HomePage: React.FC<PageProps> = ({}) => {
             src="/images/service_area_map.png"
             width={1560}
             height={1560}
-            className="rounded-lg"
-            alt="Where we are located in New Orleans"
+            className="rounded-lg lg:rounded-xl"
+            alt="Map of where we work."
           /> 
         </a>
         
@@ -63,7 +63,7 @@ const LeftSideText: React.FC = ({}) => {
     <div id="left-side-text" className="flex flex-col w-min">
 
       {/* HEADER TEXT */}
-      <div id="desktop-header-text" className="flex flex-col text-black leading-none text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] xl:pr-4">
+      <div id="desktop-header-text" className="flex flex-col text-black leading-none text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:pr-4">
         <span className="">Electrical</span>
         <span className="pb-3 md:pb-6">Services</span>
       </div>
