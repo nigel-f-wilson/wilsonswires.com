@@ -60,32 +60,32 @@ const ServicesPage: React.FC<PageProps> = ({}) => {
           bodyTextMobile="Wiring a new home requires staying on top of the latest changes to the National Electrical Code. If you are a developer looking to build a new home, Wilson's Wires can help you from start to finish. We handle permitting, temporary power, and inspections. We are highly responsive, making it easy for general contractors to manage the complex logistics of getting different trades on site in the right order."
           imagePath="/images/stock_new_construction.jpg"
         />
-        {/* RENOVATIONS */}
+        {/* RENOVATIONS & ADDITIONS */}
         <ServiceCard
-          title="Renovations"
-          bodyText="TODO"
+          title="Renovations & Additions"
+          bodyText="Remodelling a kitchen or bathroom? Adding on a porch or garage? Every home will "
           bodyTextMobile="TODO"
           imagePath="/images/stock_remodel.jpg"
         />
         {/* PERMITS & CODE INSPECTIONS */}
         <ServiceCard
           title="Permits & Code Inspections"
-          bodyText="TODO"
+          bodyText="Working with the Office of Safety and Permits is never easy. It is hard to know what paperwork you need to file, and even once you get that straight you will often end up waiting a long time to get a response. Wilson's Wires is happy to serve as your guide to this system and when time is of the essence, we will advocate for you by going to City Hall in person and making sure that your permit applications don't get lost in the shuffle. Once a permit is approved, we work with "
           bodyTextMobile="TODO"
           imagePath="/images/stock_smart_meter.jpg"
         />
         {/* EV CHARGERS */}
         <ServiceCard
           title="EV Charging Stations"
-          bodyText="TODO"
-          bodyTextMobile="TODO"
+          bodyText="Electric Vehicles are the way of the future! But filling up their batteries takes longer than filling up a gas tank. In fact, charging electric batteries too fast will damage them. If you are going to invest in an electric car, one of the best ways to protect that investment is to install a smart charger at home so that you can recharge the battery at the optimal speed. Wilson's Wires is experienced in the installation of EV charging stations compatible with Tesla, Kia, Nissan, Ford, Chevy, BMW, Mercedes Benz, Porsche, and Volkswagen. Call today to get a quote for the installation of a Level 2 smart charger and roll into the future free of the gas pump."
+          bodyTextMobile="Did you know that recharging batteries too fast will reduce their lifespan? If you are ready to roll into the future in an Electric Vehicle, one of the best ways to protect your investment is to install a Level 2 smart charger at home so that you can recharge the battery at the optimal speed. Wilson's Wires installs EV charging stations compatible with Tesla, Kia, Nissan, Ford, Chevy, BMW, and more!"
           imagePath="/images/stock_ev_charger.jpg"
         />
         {/* SMOKE ALARMS */}
         <ServiceCard
           title="Smoke Detectors"
-          bodyText="TODO"
-          bodyTextMobile="TODO"
+          bodyText="Installing smoke alarms are one of the simplest ways to protect your house and those living there. The National Fire Protection Association has required smoke alarms in all residential structures since 1976, but many older homes have never been updated. While having smoke alarms with battery backup is a great idea, smoke alarms that run on batteries alone create another chore and many tenants will simply take them down when the batteries get low and they start emitting annoying chirps to warn of this fact. The best solution is install smoke alarms which are wired into your homes electrical system so that the batteries don't get drained. Call Wilson's Wires today for a free estimate and peace of mind."
+          bodyTextMobile="Installing smoke alarms are one of the simplest ways to protect your house and those living there. The NFPA has required smoke alarms in all residential structures since 1976, but many older homes have never been updated. The best smoke alarms have battery backup but are also wired directly into your home's electrical system so that the batteries don't get drained. Call Wilson's Wires today for a free estimate and peace of mind."
           imagePath="/images/stock_smoke_detector.jpg"
         />
         {/* WHOLE HOME SURGE PROTECTION */}
@@ -98,8 +98,8 @@ const ServicesPage: React.FC<PageProps> = ({}) => {
         {/* APPLIANCE REPAIR */}
         <ServiceCard
           title="Appliance Repair"
-          bodyText="Washers, dryers, electric stoves, attic fans, refrigerators, garage door openers, and more. When you own a home, there are so many things that can go wrong. Replacing appliances can be very expensive! Just getting these large items in and out of your home is a lot of work. Often, appliances can be repaired on site at a huge cost savings while also diverting unnecessary waste from landfills. "
-          bodyTextMobile="TODO"
+          bodyText="Washers, dryers, electric stoves, furnaces, air-conditioners, attic fans, refrigerators, garage door openers, and more. When you own a home, there are so many things that can go wrong, and replacing appliances can be very expensive! Just getting these large items in and out of your home is a lot of work. Often, appliances can be repaired on-site at a huge cost savings. If you have an electric dryer that spins but doesn't get hot, we can help! If you have a furnace or stove that has gas but won't ignite, we can help! If the blower motor in your A/C or the motor in your attic fan won't spin, we can help! Almost every home appliance has some electrical components within it. At Wilson's Wires we love solving the kind of puzzles that get major appliances working again and divert unnecessary waste from landfills. We also offer competitive rates on the installation of new heavy-duty outlets for customers who are switching from gas appliances to electric."
+          bodyTextMobile="Washers, dryers, electric stoves, furnaces, air-conditioners, attic fans, refrigerators, garage door openers, and more. Almost every appliance has some electrical components within it. At Wilson's Wires we love solving the puzzles that get major appliances working again and divert waste from landfills. We also offer competitive rates on the installation of new heavy-duty outlets for customers who are switching from gas appliances to electric."
           imagePath="/images/stock_appliance_repair.jpg"
         />
         {/* MINI SPLIT INSTALLATION */}
