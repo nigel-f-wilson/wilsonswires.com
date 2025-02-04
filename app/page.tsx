@@ -72,7 +72,7 @@ const LeftSideText: React.FC = ({}) => {
       <div id="desktop-body-text" className="flex flex-col font-medium text-black text-xl md:text-3xl xl:text-3xl pb-4 pr-2 w-fit">
         
         <span className="pb-3 md:pb-6 " >Serving New Orleans and Baton Rouge. From the North Shore to the West Bank and everywhere between.</span>
-        <span className="pb-3 md:pb-6">Residential and Commercial </span>
+        <span className="pb-3 md:pb-6">Residential and Commercial.</span>
         <span className="pb-3 md:pb-6">New Construction, Renovations, Troubleshooting, and more. </span>
         <span className='text-nowrap'>Licensed and Insured.</span>
       </div>
