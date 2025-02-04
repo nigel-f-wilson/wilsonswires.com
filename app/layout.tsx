@@ -28,9 +28,12 @@ const RootLayout: React.FC<LayoutProps> = ({children}) => {
       <body className={`flex flex-col justify-between bg-blue-light ${styles.body} antialiased min-h-[100vh]`}>
         <Navbar/>
 
-        <Body children={children} />
+        <div id="container" className="max-w-6xl min-h-[75vh] pb-8" > 
+          {children}
+        </div>
 
         <Footer  />
+        
       </body>
     </html>
   );
@@ -43,9 +46,9 @@ interface BodyProps {
 
 const Body: React.FC<BodyProps> = ({children}) => {
   return (
-    <div id="container" className={`${styles.body} max-w-6xl`}>
-      {children}
-    </div>
+    <>
+      {children} 
+    </>
   );
 }
 
