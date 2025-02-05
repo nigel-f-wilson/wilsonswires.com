@@ -24,7 +24,7 @@ interface PageProps {
 const ServicesPage: React.FC<PageProps> = ({}) => {
   return (
     <main id="services-page" className="flex flex-col">
-      <div className="grid grid-cols-1 p-4 gap-4 w-full border border-red-500">
+      <div className="grid grid-cols-1 p-4 gap-4 w-full">
         {/* TROUBLESHOOTING */}
         <ServiceCard
           title="Troubleshooting"
