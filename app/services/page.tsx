@@ -128,7 +128,7 @@ const ServicesPage: React.FC<PageProps> = ({}) => {
           title="Off-Grid Solar Panels"
           bodyText="Before learning to work on grid-tied homes and businesses and becoming a licensed electrician, Nigel, the founder of Wilson's Wires, lived off-grid. He relied on rain-catch systems for all the water he used and generated 100% of his own electricity from the sun with a solar panel array on the roof of a tiny house he designed and built. The design of off grid solar power solutions is a unique specialty, quite different from the installation of grid-tied systems. Correctly sizing and connecting battery banks, charge controllers, and inverters is something most residential electricians have no experience with. If you need power in a remote area, on the roof of a tiny house or camper van, or even for a small farm in the city, call Wilson's Wires and have experience on your side!"
           bodyTextMobile="Before becoming a licensed electrician, the founder of Wilson's Wires, lived off-grid and generated all of his own electricity with a solar panel array on the roof of a tiny house he built. The design of off grid solar power solutions for tiny homes and campers is a unique specialty and is something most residential electricians have no experience with. If you need power in a remote area, call Wilson's Wires and have experience on your side!"
-          imagePath="/images/iStock-solar-panels.jpg"
+          imagePath="/images/stock_solar_panels.jpg"
         />
       </div>
       
