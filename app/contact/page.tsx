@@ -15,10 +15,44 @@ const FormLabel: React.FC<FormLabelProps> = ({ label }) => {
     </span>
   );
 }
+
+interface RadioProps {
+  label: string;
+  value: string;
+  name: string;
+  onChange: (value: string) => void;
+  checked?: boolean;
+}
+
+const Radio: React.FC<RadioProps> = ({ label, value, name, onChange, checked }) => {
+  return (
+    <label className="flex items-center">
+      <input
+        type="radio"
+        name={name}
+        value={value}
+        onChange={() => onChange(value)}
+        checked={checked}
+        className="hidden peer" 
+      />
+      <div className="w-4 h-4 rounded-full border border-gray-300 flex items-center justify-center peer-checked:bg-blue-500 peer-checked:border-blue-500">
+        <div className="w-2 h-2 rounded-full bg-blue-500 peer-checked:block hidden"></div>
+      </div>
+      <span className="ml-2 text-gray-700">{label}</span>
+    </label>
+  );
+};
+
   
 export default function Page() {
   const [addressesAreSame, setAddressesAreSame] = useState(false);
+  const [howYouHeardAboutUs, setHowYouHeardAboutUs] = useState("");
 
+  const handleHowYouHeardChange = (value: string) => {
+    setHowYouHeardAboutUs(value);
+  };
+
+  // STyLE CLASSES
   const formItemClasses = "flex flex-col sm:flex-row mb-4"
   const inputClasses = "peer block w-full rounded-md border border-gray-200 pl-4 text-sm sm:text-lg placeholder:text-gray-500 outline-2 "
   
@@ -113,6 +147,22 @@ export default function Page() {
             className={inputClasses}
           />
         </label>
+
+        {/* HOW DID YOU HEAR ABOUT US? */}
+        <label className="mb-4" >
+          <FormLabel label="How did you hear about us?" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 mx-auto p-4 text-black">
+            <Radio label="Word of mouth" value="wordOfMouth" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'wordOfMouth'} />
+            <Radio label="Google Maps" value="googleMaps" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'googleMaps'} />
+            <Radio label="Web Search or Google Ads" value="searchEngine" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'searchEngine'} />
+            <Radio label="From a yard sign" value="yardSign" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'yardSign'} />
+            <Radio label="I saw your van" value="vanSign" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'vanSign'} />
+            <Radio label="Thumbtack" value="thumbtack" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'thumbtack'} />
+            <Radio label="Angi's List" value="angisList" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'angisList'} />
+            <Radio label="Other" value="other" name="radioGroup" onChange={handleHowYouHeardChange} checked={howYouHeardAboutUs === 'other'} />
+          </div>
+        </label>
+
 
         <div className="flex w-full justify-center" >
           <button type="submit" className="flex h-10 w-fit  items-center rounded-lg bg-blue-500 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:bg-blue-600 aria-disabled:cursor-not-allowed aria-disabled:opacity-50">
