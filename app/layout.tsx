@@ -1,4 +1,6 @@
-'use client'
+// 'use client'
+
+
 import { clsx } from 'clsx';
 
 // CSS
@@ -10,6 +12,7 @@ import styles from '@/app/ui/home.module.css';
 // Hooks
 
 // Next Components
+import { Html, Head, Main, NextScript } from 'next/document';
 
 // My Components
 import Navbar from './ui/navbar';
@@ -21,10 +24,26 @@ interface LayoutProps {
 
 
 // ROOT LAYOUT 
-
 const RootLayout: React.FC<LayoutProps> = ({children}) => {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          // strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+        />
+
+        <script id="ga-script">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+                `}
+        </script>
+      </head>
       <body className={`flex flex-col justify-between bg-blue-light ${styles.body} antialiased min-h-[100vh]`}>
         <Navbar/>
 

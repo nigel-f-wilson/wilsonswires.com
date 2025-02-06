@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
 // Demo of using CSS Modules instead of Tailwind.
 // See /app/ui/home.module.css for class definitions.
@@ -34,6 +35,8 @@ const HomePage: React.FC<PageProps> = ({}) => {
         <div className="col-span-full xs:col-span-3 h-min p-2 md:py-4" >
           <ButtonGrid/>
         </div>
+
+        
         
       </div>
       <div id="customer-testimony">

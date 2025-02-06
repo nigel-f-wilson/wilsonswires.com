@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+import type { Metadata } from 'next'
+
+
 // Demo of using CSS Modules instead of Tailwind.
 // See /app/ui/home.module.css for class definitions.
 // Use this when you need CSS that is not in the Tailwind utility classes.
@@ -15,7 +18,12 @@ import { inter, lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
 
 // components
-import IconButton from "@/app/ui/iconButton"
+
+
+// export const metadata: Metadata = {
+//   title: '...',
+//   description: '...',
+// }
 
 interface PageProps {
   // children: React.ReactNode;
