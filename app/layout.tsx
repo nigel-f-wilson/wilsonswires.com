@@ -28,6 +28,8 @@ const RootLayout: React.FC<LayoutProps> = ({children}) => {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <title>Wilson's Wires</title> 
+
         <script
           // strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
