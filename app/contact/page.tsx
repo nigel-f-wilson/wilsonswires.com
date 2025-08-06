@@ -52,7 +52,7 @@ export default function Page() {
     setHowYouHeardAboutUs(value);
   };
 
-  // STyLE CLASSES
+  // STYLE CLASSES
   const formItemClasses = "flex flex-col sm:flex-row mb-4"
   const inputClasses = "peer block w-full rounded-md border border-gray-200 pl-4 text-sm sm:text-lg placeholder:text-gray-500 outline-2 "
   
