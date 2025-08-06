@@ -32,6 +32,10 @@ interface PageProps {
 const ServicesPage: React.FC<PageProps> = ({}) => {
   return (
     <main id="services-page" className="flex flex-col">
+      {/* HEADER TEXT */}
+      <div id="header-text" className="flex justify-center p-8 text-black leading-none text-[3.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] xl:pr-4">
+        Our Services
+      </div>
       <div className="grid grid-cols-1 p-4 gap-4 w-full">
         {/* TROUBLESHOOTING */}
         <ServiceCard
@@ -54,11 +58,18 @@ const ServicesPage: React.FC<PageProps> = ({}) => {
           bodyTextMobile="Electric Panels are the first line of defense against fires. If too many things get plugged into the same circuit, a mouse chews a wire, or a connection comes loose it will cause a circuit breaker to trip, making sure that wire does not overheat and start a fire. Circuit breakers wear out over time and older ones do not offer the same protections as modern ones. If you aren't sure how old your home's electric panel is, or if it has fuses like those in the picture, now is the time call Wilson's Wires for a routine inspection."
           imagePath="/images/edison_fuse_panel.jpeg"
         />
-        {/* GENERATORS */}
+        {/* PERMANENT GENERATORS */}
         <ServiceCard
-          title="Generators"
-          bodyText="In the gulf south, where hurricanes are a common occurrence, generators can save you a lot of money and enable you to stay in your home during prolonged power outages. Generators may seem expensive, but when you consider the value of a refrigerator full of food and the cost of hotel rooms the net savings are clear. Whether you want to install a pad-mounted whole home generator that comes on automatically when it is needed, or simply a receptacle that will allow you to power your home with a portable generator, proper installation is vital for safety. Improperly installed generators can feed power back onto the grid during outages, creating a potentially deadly situation for the crews working to restore downed lines. Call Wilson's Wires today to ensure that you can stay safe and comfortable in your own home next hurricane season!"
-          bodyTextMobile="Generators can save you a lot of money and enable you to stay in your home during prolonged power outages that often happen during hurricane season. Improperly installed generators can feed power back onto the grid during outages, creating a potentially deadly situation for the crews working to restore downed lines. Whether you want a permanent whole home generator or simply a way to connect a portable generator, call Wilson's Wires today to keep the power on no matter what happens!"
+          title="Whole-Home Generators"
+          bodyText="In the gulf south, where hurricanes are a common occurrence, generators can save you a lot of money and enable you to stay in your home during prolonged power outages. Generators may seem expensive, but when you consider the value of a refrigerator full of food and the cost of hotel rooms the net savings are clear. Wilson's Wires is a certified installer of Generac brand pad-mounted whole-home generators. These smart and powerful generators detect when the electrical grid goes down and turn on automatically when needed, restoring power within 10 seconds without requiring any hands on intervention.  In addition to installations, we offer annual service contracts to ensure that your generator is ready when the need strikes. Call Wilson's Wires today to ensure that you can stay safe and comfortable in your own home next hurricane season!"
+          bodyTextMobile="Wilson's Wires is a certified installer of Generac brand pad-mounted whole-home generators. These smart and powerful generators detect when the electrical grid goes down and turn on automatically when needed, restoring power within 10 seconds without requiring any hands on intervention.  In addition to installations, we offer annual service contracts to ensure that your generator is ready when the need strikes. Call today to ensure that you can stay safe and comfortable in your own home next hurricane season!"
+          imagePath="/images/generac_generator.png"
+        />
+        {/* PORTABLE GENERATORS */}
+        <ServiceCard
+          title="Portable Generators"
+          bodyText="If a whole-home permanently installed generator is out of your budget we can still help! Wilson's Wires installs special outlets used to connect portable generators directly to your home's electrical service panel. Proper installation is vital as improperly installed generators can feed power back onto the grid during outages, creating a potentially deadly situation for the crews working to restore downed lines. Call Wilson's Wires today to ensure that you can stay safe and comfortable in your own home next hurricane season!"
+          bodyTextMobile="If a whole-home permanently installed generator is out of your budget we can still help! Wilson's Wires installs special outlets used to connect portable generators directly to your home's electrical service panel. Proper installation is vital as improperly installed generators can feed power back onto the grid during outages, creating a potentially deadly situation for the crews working to restore downed lines. Call Wilson's Wires today to ensure that you can stay safe and comfortable in your own home next hurricane season!"
           imagePath="/images/stock_portable_generator.jpg"
         />
         {/* NEW CONSTRUCTION */}
@@ -71,15 +82,15 @@ const ServicesPage: React.FC<PageProps> = ({}) => {
         {/* RENOVATIONS & ADDITIONS */}
         <ServiceCard
           title="Renovations & Additions"
-          bodyText="Remodelling a kitchen or bathroom? Adding on a porch or garage? Every home will "
-          bodyTextMobile="TODO"
+          bodyText="Remodelling a kitchen or bathroom? Adding on a porch or garage? Renovating makes the house you bought into the home you dream of. Unfortunately, renovating your home also means living in a construction site for a while. At Wilson's Wires we understand how difficult that can be and we take every measure possible to make the experience minimally disruptive for you and your family. We communicate proactively about when we will be on site and keep to our agreed upon schedule. We always leave the site in a clean and safe condition when we leave for the day. Working on old homes often involves a few surprises. We always inform the homeowner promptly when we discover a circumstance that will require the plan to change or when we discover existing wiring that is not up to top safety standards."
+          bodyTextMobile="Remodelling a kitchen or bathroom? Adding on a porch or garage? Renovating makes the house you bought into the home you dream of. Unfortunately, it also involves the hassle of living in a construction site. At Wilson's Wires we do everything we can to make the experience minimally disruptive for you and your family. We communicate proactively about when we will be on site and keep to our agreed upon schedule. We always leave the site in a clean and safe condition when we leave for the day. Working on old homes often involves a few surprises. We always inform the homeowner promptly when we discover a circumstance that will require the plan to change or when we discover existing wiring that is not up to top safety standards."
           imagePath="/images/stock_remodel.jpg"
         />
         {/* PERMITS & CODE INSPECTIONS */}
         <ServiceCard
           title="Permits & Code Inspections"
-          bodyText="Working with the Office of Safety and Permits is never easy. It is hard to know what paperwork you need to file, and even once you get that straight you will often end up waiting a long time to get a response. Wilson's Wires is happy to serve as your guide to this system and when time is of the essence, we will advocate for you by going to City Hall in person and making sure that your permit applications don't get lost in the shuffle. Once a permit is approved, we work with "
-          bodyTextMobile="TODO"
+          bodyText="Working with the Office of Safety and Permits can be a slow, frustrating, and confusing experience. It is hard to know what paperwork you need to file. Even once you get that straight, you will often end up waiting several weeks to get a response. Getting your permit application right the first time can save a lot of time. Wilson's Wires is happy to serve as your guide to this system and when time is of the essence, we will advocate for you by going to City Hall in person and making sure that your permit applications don't get lost in the shuffle. Once a permit is approved, we work with licensed third party electrical inspectors to get our work signed off on as quickly as possible."
+          bodyTextMobile="Working with the Office of Safety and Permits can be a frustrating experience. It is hard to know what paperwork you need to file and it often takes several weeks to get a response. Wilson's Wires is happy to serve as your guide to make this process as painless as possible. When time is of the essence, we will advocate for you by going to City Hall in person and making sure that your permit applications don't get lost in the shuffle. We work with licensed third party electrical inspectors to get our work signed off on as quickly as possible."
           imagePath="/images/stock_smart_meter.jpg"
         />
         {/* EV CHARGERS */}
