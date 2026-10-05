@@ -28,7 +28,7 @@ function Footer() {
           <a href="https://arlspublic.lslbc.louisiana.gov/Public/DetailedSearch/ByNumber" target="_blank" className="transition-colors hover:bg-blue-main grid-col-start-2">
             <span>Louisiana License #79644</span> 
           </a>
-          <span className="col-start-1 col-span-2 row-start-2">&copy; 2025 Wilson's Wires LLC. All rights reserved.</span> 
+          <span className="col-start-1 col-span-2 row-start-2">&copy; {new Date().getFullYear()} Wilson's Wires LLC. All rights reserved.</span> 
 
         </div>
       {/* </div> */}
