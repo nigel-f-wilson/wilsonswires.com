@@ -1,11 +1,5 @@
-import type { Metadata } from 'next';
-
 // My Components
 import NewClientForm from '@/app/ui/newClientForm';
-
-export const metadata: Metadata = {
-  title: "New Client | Wilson's Wires",
-};
 
 interface PageProps {
   // children: React.ReactNode;
