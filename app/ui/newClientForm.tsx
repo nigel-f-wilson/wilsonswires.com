@@ -117,7 +117,9 @@ const NewClientForm: React.FC = ({}) => {
       <div id="new-client-success" role="status" className="flex flex-col flex-1 items-center rounded-lg bg-gray-50 p-8 mx-4 mb-8 text-center">
         <CheckCircleIcon className="h-12 w-12 text-blue-main mb-4" />
         <span className="text-3xl mb-2">Thank you!</span>
-        <span className="text-lg">Your information has been saved. We will be in touch soon.</span>
+        <span className="text-lg">
+          Your information has been saved{state.confirmationSent ? " and a confirmation email is on its way" : ""}. We will be in touch soon.
+        </span>
       </div>
     );
   }

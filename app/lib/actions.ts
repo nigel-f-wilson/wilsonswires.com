@@ -1,10 +1,13 @@
 'use server';
 
 import { getDb } from '@/app/lib/db';
+import { sendNewClientEmails } from '@/app/lib/email';
 import { newClientSchema, type NewClientField } from '@/app/lib/validation';
 
 export interface NewClientFormState {
   status: 'idle' | 'success' | 'error';
+  // Whether the confirmation email went out (only set on success).
+  confirmationSent?: boolean;
   // A message about the form as a whole.
   message?: string;
   // Messages about individual fields, keyed by field name.
@@ -75,5 +78,8 @@ export async function createClient(
     };
   }
 
-  return { status: 'success' };
+  // The account is saved at this point; a failed email is logged, not shown.
+  const confirmationSent = await sendNewClientEmails(client);
+
+  return { status: 'success', confirmationSent };
 }
