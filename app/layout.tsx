@@ -12,7 +12,6 @@ import styles from '@/app/ui/home.module.css';
 // Hooks
 
 // Next Components
-import { Html, Head, Main, NextScript } from 'next/document';
 
 // My Components
 import Navbar from './ui/navbar';
@@ -57,19 +56,6 @@ const RootLayout: React.FC<LayoutProps> = ({children}) => {
         
       </body>
     </html>
-  );
-}
-
-
-interface BodyProps {
-  children: React.ReactNode;
-} 
-
-const Body: React.FC<BodyProps> = ({children}) => {
-  return (
-    <>
-      {children} 
-    </>
   );
 }
 
